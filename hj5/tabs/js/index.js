@@ -9,6 +9,7 @@ tabs.forEach(tab => {
   tab.addEventListener(`click`, tabOnClick);
 });
 xhr.addEventListener('load', onResponse);
+xhr.addEventListener(`loadend`, onLoadEnd);
 
 getContent("components/email-tab.html");
 
@@ -19,8 +20,11 @@ function tabOnClick(e) {
 }
 
 function onResponse() {
-  preloader.classList.toggle(`hidden`);
   content.innerHTML = xhr.responseText;
+}
+
+function onLoadEnd() {
+  preloader.classList.toggle(`hidden`);
 }
 
 function getContent(adress) {
