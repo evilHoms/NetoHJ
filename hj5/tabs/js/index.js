@@ -15,8 +15,10 @@ getContent("components/email-tab.html");
 
 function tabOnClick(e) {
   e.preventDefault();
-  tabs.forEach(toggleActive);
-  getContent(this.getAttribute(`href`));
+  if (!this.classList.contains(`active`)) {
+    tabs.forEach(toggleActive);
+    getContent(this.getAttribute(`href`));
+  }
 }
 
 function onResponse() {
