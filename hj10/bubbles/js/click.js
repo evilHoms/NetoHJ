@@ -1,4 +1,4 @@
-'use strinct';
+'use strict';
 
 const wsConnection = new WebSocket(`wss://neto-api.herokuapp.com/mouse`);
 

@@ -1,4 +1,4 @@
-'use strinct';
+'use strict';
 const chat = document.querySelector(`.chat`);
 const messageBox = chat.querySelector(`.message-box`);
 const messageInput = chat.querySelector(`.message-input`);
